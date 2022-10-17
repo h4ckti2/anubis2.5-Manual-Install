@@ -41,3 +41,8 @@ FLUSH PRIVILEGES;
 ctrl + D
 mysql -u anubis -p anubisdb < admin_db.sql
 password; @###$dd32234422
+cd /var/www/html/site
+mv *.* /var/www/html
+_______________
+your link
+http://host.com/anubis
